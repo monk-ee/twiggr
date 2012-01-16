@@ -47,7 +47,7 @@ return;
 	}
 	public function swapOutTweets() {
 		//<span class="entry-content">Banana Chips are awesome at first, but it's one of those foods that makes you feel ill when you consume a bit</span>
-	 	$pattern = '/<span class="entry-content">(.*)<\/span>/';
+	 	$pattern = '/<div class="tweet-text js-tweet-text">(.*)<\/div>/';
 		$this->_curl_response = preg_replace_callback($pattern, array('self', 'ebonize'),$this->_curl_response);
 	}
 	public function swapOutAnalytics() {
